@@ -6,6 +6,7 @@ from tkinter import Tk, Label, Button, Listbox, MULTIPLE, messagebox, Scrollbar,
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 from tqdm import tqdm  # Biblioteca para a barra de progresso no console
 
+ # Trata listas como strings (nao sei como funcionou que bom que funcionou !NÃO MEXER LUAN!)
 def flatten_json(json_obj):
     """Achatar um JSON com sub-objetos."""
     flat_dict = {}
@@ -20,7 +21,7 @@ def flatten_json(json_obj):
                 else:
                     flat_dict[new_key] = v
         elif isinstance(json_obj, list):
-            # Trata listas como strings
+           
             flat_dict[parent_key] = str(json_obj)
         else:
             flat_dict[parent_key] = json_obj
@@ -68,7 +69,7 @@ def save_to_excel(df, output_path, selected_columns):
 def select_columns(df):
     """Cria uma interface para selecionar as colunas a serem exportadas com lista suspensa e rolagem."""
     root = Tk()
-    root.title("Seleção de Colunas")
+    root.title("Selecao de Colunas")
 
     # Criar o frame principal
     frame = Frame(root)
@@ -119,7 +120,7 @@ def process_and_save(df, selected_columns):
             pbar.update(len(df))
         
         # Mensagem de conclusão
-        messagebox.showinfo("Concluído", f"Arquivo salvo em: {output_file_path}")
+        messagebox.showinfo("Concluido", f"Arquivo salvo em: {output_file_path}")
 
     except Exception as e:
         print(f"Erro: {e}")
@@ -138,7 +139,7 @@ def run_process():
         df = read_and_process_json(json_file_path)
 
         # Verificar o número de linhas processadas
-        print(f"Número de linhas no DataFrame: {len(df)}")
+        print(f"Numero de linhas no DataFrame: {len(df)}")
 
         # Selecionar as colunas a serem exportadas
         select_columns(df)

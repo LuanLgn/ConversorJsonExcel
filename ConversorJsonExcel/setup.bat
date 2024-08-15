@@ -6,7 +6,7 @@ set "venv_dir=venv"
 
 REM Verificar se o ambiente virtual já existe
 if exist "%venv_dir%\Scripts\activate" (
-    echo Ambiente virtual já existe.
+    echo Ambiente virtual ja existe.
 ) else (
     echo Criando ambiente virtual...
     python -m venv %venv_dir%
@@ -15,7 +15,7 @@ if exist "%venv_dir%\Scripts\activate" (
 echo Ativando ambiente virtual...
 call %venv_dir%\Scripts\activate
 
-echo Instalando dependências...
+echo Instalando dependencias...
 pip install -r requirements.txt
 
 echo Verificando a presença do conversor.py...
@@ -30,7 +30,7 @@ if exist conversor.py (
 echo Executando o conversor.py...
 python conversor.py
 
-echo Configuração e execução concluídas.
+echo Configuracao e execucao concluidas.
 pause
 
 endlocal
