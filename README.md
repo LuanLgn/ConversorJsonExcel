@@ -106,11 +106,5 @@ Certifique-se de ter o Python instalado. Este programa foi testado com o Python 
 
 - O programa achata estruturas JSON aninhadas para colunas planas em um DataFrame.
 - Listas dentro do JSON são convertidas em strings para garantir a compatibilidade com o formato Excel.
-
-## Problemas e Suporte
-
-Se você encontrar problemas ou tiver dúvidas, por favor, abra uma issue no repositório ou entre em contato com o mantenedor.
-
----
-
-Este README fornece uma visão geral completa de como configurar e usar o seu programa, e pode ser ajustado conforme necessário para melhor atender aos requisitos específicos do seu projeto.
+- Se estiver com erro de importação provavelmente seu JSON está faltando algo, mas fale comigo se estiver com problemas :D
+- Feito com amor pro pessoal de Implantação S2
